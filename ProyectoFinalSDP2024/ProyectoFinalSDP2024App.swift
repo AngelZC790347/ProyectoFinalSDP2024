@@ -7,11 +7,22 @@
 
 import SwiftUI
 
+@MainActor let isIpad = UIDevice.current.userInterfaceIdiom == .pad
+
 @main
 struct ProyectoFinalSDP2024App: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                if isIpad {
+                    ContentViewIpad()
+                }else{
+                    ContentView()
+                }
+            }
+
+            
         }
     }
 }

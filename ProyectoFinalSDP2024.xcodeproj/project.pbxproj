@@ -6,19 +6,83 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9C045C292D07C167009F0060 /* ContentViewIpad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C045C282D07C167009F0060 /* ContentViewIpad.swift */; };
+		9C045C2F2D07D0B5009F0060 /* mangas.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C045C2E2D07D0B5009F0060 /* mangas.json */; };
+		9C045C322D07D0FB009F0060 /* Manga.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C045C312D07D0F3009F0060 /* Manga.swift */; };
+		9C62E08C2D2200DB00D38E6D /* MangaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62E08B2D2200CE00D38E6D /* MangaRepository.swift */; };
+		9CBC19B02D3C9B4900CE07CD /* ToolBarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBC19AF2D3C9B4900CE07CD /* ToolBarMenu.swift */; };
+		9CC652F02D07BD7E00860688 /* NetworkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC652EF2D07BD7300860688 /* NetworkInteractor.swift */; };
+		9CC652F22D07BE9C00860688 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC652F12D07BE9700860688 /* URLSession.swift */; };
+		9CC652F42D07BEBE00860688 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC652F32D07BEBA00860688 /* NetworkError.swift */; };
+		9CE45BD72D051CCA00BBDEDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE45BD12D051CCA00BBDEDA /* Preview Assets.xcassets */; };
+		9CE45BD82D051CCA00BBDEDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CE45BD32D051CCA00BBDEDA /* Assets.xcassets */; };
+		9CE45BD92D051CCA00BBDEDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45BD42D051CCA00BBDEDA /* ContentView.swift */; };
+		9CE45BDA2D051CCA00BBDEDA /* ProyectoFinalSDP2024App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45BD52D051CCA00BBDEDA /* ProyectoFinalSDP2024App.swift */; };
+		9CE45BE02D078EFC00BBDEDA /* ApiMangaRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE45BDF2D078ED900BBDEDA /* ApiMangaRequest.swift */; };
+		9CF650B22D41342900F94762 /* SBCarrousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF650B12D41342900F94762 /* SBCarrousel.swift */; };
+		9CF650B82D415BFC00F94762 /* SBCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF650B72D415BFC00F94762 /* SBCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C62E0952D2203B600D38E6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CE45BB82D0508E300BBDEDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CE45BBF2D0508E300BBDEDA;
+			remoteInfo = ProyectoFinalSDP2024;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9C045C282D07C167009F0060 /* ContentViewIpad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewIpad.swift; sourceTree = "<group>"; };
+		9C045C2E2D07D0B5009F0060 /* mangas.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mangas.json; sourceTree = "<group>"; };
+		9C045C312D07D0F3009F0060 /* Manga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manga.swift; sourceTree = "<group>"; };
+		9C62E08B2D2200CE00D38E6D /* MangaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangaRepository.swift; sourceTree = "<group>"; };
+		9C62E0912D2203B600D38E6D /* ProyectoFinalSDP2024Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProyectoFinalSDP2024Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CBC19AF2D3C9B4900CE07CD /* ToolBarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarMenu.swift; sourceTree = "<group>"; };
+		9CC652EF2D07BD7300860688 /* NetworkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInteractor.swift; sourceTree = "<group>"; };
+		9CC652F12D07BE9700860688 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
+		9CC652F32D07BEBA00860688 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		9CE45BC02D0508E300BBDEDA /* ProyectoFinalSDP2024.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProyectoFinalSDP2024.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE45BD12D051CCA00BBDEDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9CE45BD32D051CCA00BBDEDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CE45BD42D051CCA00BBDEDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9CE45BD52D051CCA00BBDEDA /* ProyectoFinalSDP2024App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProyectoFinalSDP2024App.swift; sourceTree = "<group>"; };
+		9CE45BDF2D078ED900BBDEDA /* ApiMangaRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMangaRequest.swift; sourceTree = "<group>"; };
+		9CF650B12D41342900F94762 /* SBCarrousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBCarrousel.swift; sourceTree = "<group>"; };
+		9CF650B72D415BFC00F94762 /* SBCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9C62E09B2D22123E00D38E6D /* Exceptions for "ProyectoFinalSDP2024Tests" folder in "ProyectoFinalSDP2024Tests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9C62E0902D2203B600D38E6D /* ProyectoFinalSDP2024Tests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9CE45BC22D0508E300BBDEDA /* ProyectoFinalSDP2024 */ = {
+		9C62E0922D2203B600D38E6D /* ProyectoFinalSDP2024Tests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ProyectoFinalSDP2024;
+			exceptions = (
+				9C62E09B2D22123E00D38E6D /* Exceptions for "ProyectoFinalSDP2024Tests" folder in "ProyectoFinalSDP2024Tests" target */,
+			);
+			path = ProyectoFinalSDP2024Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C62E08E2D2203B600D38E6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CE45BBD2D0508E300BBDEDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +93,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C045C2A2D07CF25009F0060 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9CC652F32D07BEBA00860688 /* NetworkError.swift */,
+				9CC652EF2D07BD7300860688 /* NetworkInteractor.swift */,
+				9CC652F12D07BE9700860688 /* URLSession.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9C045C2B2D07CFCD009F0060 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C045C2C2D07CFE9009F0060 /* Shared */,
+				9CC652F62D07C12700860688 /* ipad */,
+				9CC652F52D07C11F00860688 /* iphone */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9C045C2C2D07CFE9009F0060 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9CF650B72D415BFC00F94762 /* SBCard.swift */,
+				9CF650B12D41342900F94762 /* SBCarrousel.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9C045C2D2D07D061009F0060 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9C045C2E2D07D0B5009F0060 /* mangas.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9C045C302D07D0EB009F0060 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C045C312D07D0F3009F0060 /* Manga.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9CC652F52D07C11F00860688 /* iphone */ = {
+			isa = PBXGroup;
+			children = (
+				9CBC19AF2D3C9B4900CE07CD /* ToolBarMenu.swift */,
+				9CE45BD42D051CCA00BBDEDA /* ContentView.swift */,
+			);
+			path = iphone;
+			sourceTree = "<group>";
+		};
+		9CC652F62D07C12700860688 /* ipad */ = {
+			isa = PBXGroup;
+			children = (
+				9C045C282D07C167009F0060 /* ContentViewIpad.swift */,
+			);
+			path = ipad;
+			sourceTree = "<group>";
+		};
 		9CE45BB72D0508E300BBDEDA = {
 			isa = PBXGroup;
 			children = (
-				9CE45BC22D0508E300BBDEDA /* ProyectoFinalSDP2024 */,
+				9CE45BD62D051CCA00BBDEDA /* ProyectoFinalSDP2024 */,
+				9C62E0922D2203B600D38E6D /* ProyectoFinalSDP2024Tests */,
 				9CE45BC12D0508E300BBDEDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,13 +168,69 @@
 			isa = PBXGroup;
 			children = (
 				9CE45BC02D0508E300BBDEDA /* ProyectoFinalSDP2024.app */,
+				9C62E0912D2203B600D38E6D /* ProyectoFinalSDP2024Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9CE45BD22D051CCA00BBDEDA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9C045C2D2D07D061009F0060 /* Mocks */,
+				9CE45BD12D051CCA00BBDEDA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9CE45BD62D051CCA00BBDEDA /* ProyectoFinalSDP2024 */ = {
+			isa = PBXGroup;
+			children = (
+				9C045C302D07D0EB009F0060 /* Models */,
+				9C045C2B2D07CFCD009F0060 /* Views */,
+				9CE45BDE2D078ECC00BBDEDA /* service */,
+				9CE45BD32D051CCA00BBDEDA /* Assets.xcassets */,
+				9CE45BD52D051CCA00BBDEDA /* ProyectoFinalSDP2024App.swift */,
+				9CE45BD22D051CCA00BBDEDA /* Preview Content */,
+			);
+			path = ProyectoFinalSDP2024;
+			sourceTree = "<group>";
+		};
+		9CE45BDE2D078ECC00BBDEDA /* service */ = {
+			isa = PBXGroup;
+			children = (
+				9C62E08B2D2200CE00D38E6D /* MangaRepository.swift */,
+				9C045C2A2D07CF25009F0060 /* Network */,
+				9CE45BDF2D078ED900BBDEDA /* ApiMangaRequest.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C62E0902D2203B600D38E6D /* ProyectoFinalSDP2024Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C62E0972D2203B600D38E6D /* Build configuration list for PBXNativeTarget "ProyectoFinalSDP2024Tests" */;
+			buildPhases = (
+				9C62E08D2D2203B600D38E6D /* Sources */,
+				9C62E08E2D2203B600D38E6D /* Frameworks */,
+				9C62E08F2D2203B600D38E6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C62E0962D2203B600D38E6D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9C62E0922D2203B600D38E6D /* ProyectoFinalSDP2024Tests */,
+			);
+			name = ProyectoFinalSDP2024Tests;
+			packageProductDependencies = (
+			);
+			productName = ProyectoFinalSDP2024Tests;
+			productReference = 9C62E0912D2203B600D38E6D /* ProyectoFinalSDP2024Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9CE45BBF2D0508E300BBDEDA /* ProyectoFinalSDP2024 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CE45BCE2D0508E500BBDEDA /* Build configuration list for PBXNativeTarget "ProyectoFinalSDP2024" */;
@@ -59,9 +242,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				9CE45BC22D0508E300BBDEDA /* ProyectoFinalSDP2024 */,
 			);
 			name = ProyectoFinalSDP2024;
 			packageProductDependencies = (
@@ -80,6 +260,10 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					9C62E0902D2203B600D38E6D = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 9CE45BBF2D0508E300BBDEDA;
+					};
 					9CE45BBF2D0508E300BBDEDA = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -100,31 +284,109 @@
 			projectRoot = "";
 			targets = (
 				9CE45BBF2D0508E300BBDEDA /* ProyectoFinalSDP2024 */,
+				9C62E0902D2203B600D38E6D /* ProyectoFinalSDP2024Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9CE45BBE2D0508E300BBDEDA /* Resources */ = {
+		9C62E08F2D2203B600D38E6D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CE45BBE2D0508E300BBDEDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CE45BD72D051CCA00BBDEDA /* Preview Assets.xcassets in Resources */,
+				9C045C2F2D07D0B5009F0060 /* mangas.json in Resources */,
+				9CE45BD82D051CCA00BBDEDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9CE45BBC2D0508E300BBDEDA /* Sources */ = {
+		9C62E08D2D2203B600D38E6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CE45BBC2D0508E300BBDEDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CF650B22D41342900F94762 /* SBCarrousel.swift in Sources */,
+				9CE45BD92D051CCA00BBDEDA /* ContentView.swift in Sources */,
+				9CF650B82D415BFC00F94762 /* SBCard.swift in Sources */,
+				9CC652F42D07BEBE00860688 /* NetworkError.swift in Sources */,
+				9C045C322D07D0FB009F0060 /* Manga.swift in Sources */,
+				9C62E08C2D2200DB00D38E6D /* MangaRepository.swift in Sources */,
+				9CE45BDA2D051CCA00BBDEDA /* ProyectoFinalSDP2024App.swift in Sources */,
+				9CBC19B02D3C9B4900CE07CD /* ToolBarMenu.swift in Sources */,
+				9CC652F22D07BE9C00860688 /* URLSession.swift in Sources */,
+				9CC652F02D07BD7E00860688 /* NetworkInteractor.swift in Sources */,
+				9CE45BE02D078EFC00BBDEDA /* ApiMangaRequest.swift in Sources */,
+				9C045C292D07C167009F0060 /* ContentViewIpad.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C62E0962D2203B600D38E6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CE45BBF2D0508E300BBDEDA /* ProyectoFinalSDP2024 */;
+			targetProxy = 9C62E0952D2203B600D38E6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9C62E0982D2203B600D38E6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GS9ZW8YNTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProyectoFinalSDP2024Tests/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = angelZCompany.ProyectoFinalSDP2024Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProyectoFinalSDP2024.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProyectoFinalSDP2024";
+			};
+			name = Debug;
+		};
+		9C62E0992D2203B600D38E6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GS9ZW8YNTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProyectoFinalSDP2024Tests/Info.plist;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = angelZCompany.ProyectoFinalSDP2024Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ProyectoFinalSDP2024.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ProyectoFinalSDP2024";
+			};
+			name = Release;
+		};
 		9CE45BCC2D0508E500BBDEDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,6 +567,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C62E0972D2203B600D38E6D /* Build configuration list for PBXNativeTarget "ProyectoFinalSDP2024Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C62E0982D2203B600D38E6D /* Debug */,
+				9C62E0992D2203B600D38E6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CE45BBB2D0508E300BBDEDA /* Build configuration list for PBXProject "ProyectoFinalSDP2024" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
