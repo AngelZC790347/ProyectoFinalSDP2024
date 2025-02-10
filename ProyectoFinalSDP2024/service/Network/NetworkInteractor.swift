@@ -25,10 +25,8 @@ extension NetworkInteractor {
             throw .json(error)
         }
     }
-    public func getStatusCode(request: URLRequest, status: Int = 200) async throws(NetworkError) {
-            let (_, response) = try await session.getData(for: request)
-            if response.statusCode != status {
-                throw .status(response.statusCode)
-            }
-        }
+    public func getStatusCode(request: URLRequest) async throws->Int {
+        let (_, response) = try await session.getData(for: request)
+        return response.statusCode
+    }
 }

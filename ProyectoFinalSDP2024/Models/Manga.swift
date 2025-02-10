@@ -11,13 +11,36 @@
 
 import Foundation
 
+struct UserId: Codable {
+    let id: String
+}
+
+struct User:Codable{
+    let email:String
+    let password:String
+    static let preview:User = .init(email: "jcfmunoz@icloud.com", password:"12345678")
+}
+
+struct CollectionManga: Codable,Identifiable {
+    var completeCollection: Bool
+    var readingVolume: Int
+    let user: UserId
+    let manga: MangaDTO
+    var mangaVO:Manga{
+        manga.toValueObj()
+    }
+    var volumesOwned: [Int]
+    let id: String
+    static let preview:CollectionManga = .init(completeCollection: false, readingVolume: 2, user: .init(id: "1"), manga: .preview, volumesOwned: [1,2,24,5,], id: "1")
+}
+
 struct MangaServiceResponse: Codable {
-    let items: Mangas
+    let items: [MangaDTO]
     let metadata: Metadata
 }
 
 struct MangaDTO: Codable {
-    let background: String
+    let background: String?
     let startDate: Date
     let url: String
     let volumes: Int?
@@ -30,15 +53,45 @@ struct MangaDTO: Codable {
     let authors: [Author]
     let endDate: Date?
     let chapters: Int?
-    let sypnosis, mainPicture: String
+    let sypnosis: String?
+    let mainPicture:String
     let id: Int
     let themes: [Theme]
     let title: String
+    static let preview = MangaDTO(
+            background: "Monster won the Grand Prize at the 3rd annual Tezuka Osamu Cultural Prize in 1999...",
+            startDate: Date(),
+            url: "https://myanimelist.net/manga/1/Monster",
+            volumes: 10,
+            genres: [],
+            titleEnglish: "Monster",
+            titleJapanese: "モンスター",
+            status: .finished,
+            score: 8.9,
+            demographics: [DemographicElement(id: "1",demographic: .seinen)],
+            authors: [],
+            endDate: nil,
+            chapters: 162,
+            sypnosis: """
+            Kenzou Tenma, a renowned Japanese neurosurgeon working in post-war Germany, faces a difficult choice: 
+            to operate on Johan Liebert, an orphan boy on the verge of death, or on the mayor of Düsseldorf...
+            """,
+            mainPicture: "\"https://cdn.myanimelist.net/images/manga/1/157897l.jpg\"",
+            id: 1,
+            themes: [],
+            title: "Monster"
+        )
     public func toValueObj() -> Manga {
-        return .init(id: id, startDate: startDate, endDate: endDate, chapters: chapters, mainPicture: mainPicture, background: background, volumes: volumes, title: title, status: status)
+        var picture = mainPicture
+        picture.removeLast()
+        picture.removeFirst()
+        return .init(id: id, startDate: startDate, endDate: endDate, chapters: chapters, mainPicture: picture , background: background ?? "", volumes: volumes, title: title, status: status,authors:authors, sypnosis: sypnosis,genres: genres,demographics: demographics,themes: themes, score: score)
+        
     }
 }
-struct Manga{
+
+
+struct Manga:Identifiable,Codable{
     let id:Int
     let startDate: Date
     let endDate: Date?
@@ -48,13 +101,26 @@ struct Manga{
     let volumes: Int?
     let title: String
     let status:Status
-    static let preview = Manga(id: 1, startDate: .now, endDate: nil, chapters: 120, mainPicture: "https://cdn.myanimelist.net/images/manga/1/157897l.jpg" , background: "Monster won the Grand Prize at the 3rd annual Tezuka Osamu Cultural Prize in 1999, as well as the 46th Shogakukan Manga Award in the General category in 2000. The series was published in English by VIZ Media under the VIZ Signature imprint from February 21, 2006 to December 16, 2008, and again in 2-in-1 omnibuses (subtitled The Perfect Edition) from July 15, 2014 to July 19, 2016. The manga was also published in Brazilian Portuguese by Panini Comics/Planet Manga from June 2012 to April 2015, in Polish by Hanami from March 2014 to February 2017, in Spain by Planeta Cómic from June 16, 2009 to September 21, 2010, and in Argentina by LARP Editores.", volumes: 10, title: "Monster", status: .currentlyPublishing)
+    let authors:[Author]
+    let sypnosis: String?
+    let genres: [Genre]
+    let demographics: [DemographicElement]
+    let themes: [Theme]
+    let score: Double
+    static let preview = Manga(id: 1, startDate: .now, endDate: nil, chapters: 120, mainPicture: "https://cdn.myanimelist.net/images/manga/1/157897l.jpg" , background: "Monster won the Grand Prize at the 3rd annual Tezuka Osamu Cultural Prize in 1999, as well as the 46th Shogakukan Manga Award in the General category in 2000. The series was published in English by VIZ Media under the VIZ Signature imprint from February 21, 2006 to December 16, 2008, and again in 2-in-1 omnibuses (subtitled The Perfect Edition) from July 15, 2014 to July 19, 2016. The manga was also published in Brazilian Portuguese by Panini Comics/Planet Manga from June 2012 to April 2015, in Polish by Hanami from March 2014 to February 2017, in Spain by Planeta Cómic from June 16, 2009 to September 21, 2010, and in Argentina by LARP Editores.", volumes: 10, title: "Monster", status: .currentlyPublishing,authors: [],sypnosis: "Kenzou Tenma, a renowned Japanese neurosurgeon working in post-war Germany, faces a difficult choice: to operate on Johan Liebert, an orphan boy on the verge of death, or on the mayor of Düsseldorf. In the end, Tenma decides to gamble his reputation by saving Johan, effectively leaving the mayor for dead.\n\nAs a consequence of his actions, hospital director Heinemann strips Tenma of his position, and Heinemann's daughter Eva breaks off their engagement. Disgraced and shunned by his colleagues, Tenma loses all hope of a successful career—that is, until the mysterious killing of Heinemann gives him another chance.\n\nNine years later, Tenma is the head of the surgical department and close to becoming the director himself. Although all seems well for him at first, he soon becomes entangled in a chain of gruesome murders that have taken place throughout Germany. The culprit is a monster—the same one that Tenma saved on that fateful day nine years ago.\n\n[Written by MAL Rewrite]", genres: [],demographics: [],themes: [], score: 12.5)
+    
+    func toValueObj()->MangaDTO{
+        .init(background: background, startDate: startDate, url: "", volumes: volumes, genres: genres, titleEnglish: "", titleJapanese: "", status: status, score: score, demographics: demographics, authors: authors, endDate: endDate, chapters: chapters, sypnosis: sypnosis, mainPicture: mainPicture, id: id, themes: themes, title: title)
+    }
 }
 // MARK: - Author
-struct Author: Codable {
+struct Author: Codable,Identifiable,Hashable,Equatable {
     let lastName, id: String
     let role: Role
     let firstName: String
+    var fullName:String{
+        "\(firstName) \(lastName)"
+    }
 }
 
 enum Role: String, Codable {
@@ -64,12 +130,11 @@ enum Role: String, Codable {
 }
 
 // MARK: - DemographicElement
-struct DemographicElement: Codable {
+struct DemographicElement: Codable ,Hashable{
     let id: String
     let demographic: DemographicEnum
 }
-
-enum DemographicEnum: String, Codable {//
+enum DemographicEnum: String, Codable ,CaseIterable{
     case seinen = "Seinen"
     case shoujo = "Shoujo"
     case shounen = "Shounen"
@@ -77,7 +142,7 @@ enum DemographicEnum: String, Codable {//
     case kids = "Kids"
 }
 
-struct Genre: Codable {
+struct Genre: Codable,Hashable {
     let id, genre: String
 }
 
@@ -87,7 +152,7 @@ enum Status: String, Codable {
     case hiatus = "on_hiatus"
 }
 
-struct Theme: Codable {
+struct Theme: Codable ,Hashable{
     let id, theme: String
 }
 
@@ -97,4 +162,4 @@ struct Metadata: Codable {
 }
 
 
-typealias Mangas = [MangaDTO]
+typealias Mangas = [Manga]

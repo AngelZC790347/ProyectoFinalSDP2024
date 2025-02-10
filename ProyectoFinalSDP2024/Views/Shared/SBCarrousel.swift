@@ -13,12 +13,16 @@ struct ColorScheme {
 }
 
 
-struct SBCarrousel: View {
+struct SBCarrousel: View,Identifiable {
+    var id:UUID {
+         UUID()
+    }
+    
     var title:String
-    var icon:Image? = Image(systemName: "star.fill")
+    var icon:Image?
     let columns = [GridItem(.fixed(300), alignment: .leading)]
     let colorScheme:ColorScheme
-    @State var mangas:[Manga]
+    var mangas:[Manga]
     var body: some View {
         VStack(alignment:.leading,spacing: 0){
             HStack(alignment: .bottom){

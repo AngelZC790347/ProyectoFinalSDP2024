@@ -15,7 +15,7 @@ struct SBCard:View{
                         .resizable()
                         .scaledToFill()
                 } placeholder: {
-                    Color.gray
+                    Text("Loadding")
                 }
                 .frame(width: 200, height: 300)
                 .clipped()
@@ -39,7 +39,7 @@ struct SBCard:View{
             }
             .frame(width: 200, height: 300)
             .cornerRadius(12)
-            .shadow(radius: 5)
+            .shadow(radius: 5)           
         }
 }
 #Preview {
